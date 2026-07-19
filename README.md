@@ -162,13 +162,15 @@ States with higher divergence indicate economic growth that is not fully reflect
 
 ## Dashboard 1
 
-*(Insert Screenshot Here)*
+<img width="1858" height="798" alt="Screenshot 2026-07-19 202915" src="https://github.com/user-attachments/assets/d20f2e69-c5f7-462d-828b-3aba378165a9" />
+
 
 ---
 
 ## Dashboard 2
 
-*(Insert Screenshot Here)*
+*<img width="1857" height="806" alt="Screenshot 2026-07-19 190957" src="https://github.com/user-attachments/assets/02adb049-e7b2-41ca-8fbe-9c909d266da3" />
+*
 
 ---
 
