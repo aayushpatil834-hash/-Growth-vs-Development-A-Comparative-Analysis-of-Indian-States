@@ -2,12 +2,12 @@
 
 <div align="center">
 
-### 📊 SQL Research Project | Data Analytics | Economic Development
+### 📊 SQL + Excel Dashboard | Data Analytics | Economic Development
 
 *"Does economic growth always lead to better human development?"*
 
 ![SQL](https://img.shields.io/badge/SQL-MySQL-blue?style=for-the-badge&logo=mysql)
-![Research](https://img.shields.io/badge/Research-Data%20Analysis-success?style=for-the-badge)
+![Excel](https://img.shields.io/badge/Excel-Dashboard-green?style=for-the-badge&logo=microsoft-excel)
 ![Status](https://img.shields.io/badge/Project-Completed-brightgreen?style=for-the-badge)
 
 </div>
@@ -16,32 +16,28 @@
 
 # 📌 Project Overview
 
-India has experienced remarkable economic growth over the past few decades, yet significant disparities remain in education, healthcare, literacy, poverty, and overall quality of life across states.
+India has emerged as one of the world's fastest-growing economies, yet economic growth alone does not guarantee improvements in education, healthcare, income distribution, or quality of life.
 
-This project investigates whether **higher economic growth actually translates into higher human development** by comparing all Indian States and Union Territories using multiple economic and social indicators.
+This project investigates the relationship between **Economic Growth** and **Human Development** across Indian States and Union Territories by combining multiple socio-economic indicators into a unified analytical framework.
 
-Instead of relying solely on GDP, this study integrates several development dimensions to provide a more comprehensive understanding of regional inequality.
+Using **SQL** for data integration and analysis and **Microsoft Excel** for dashboard development, the project demonstrates how states with similar economic performance can exhibit significantly different development outcomes.
 
 ---
 
 # 🎯 Objectives
 
-This project aims to:
-
-- Compare Indian States using both economic and social indicators.
-- Measure overall economic performance through a custom **Growth Score**.
-- Measure overall human development through a custom **Development Score**.
-- Quantify the gap between growth and development using a **Growth–Development Divergence Index**.
+- Compare Indian States using economic and social indicators.
+- Build a Growth Score to evaluate economic performance.
+- Build a Development Score to evaluate human development.
+- Measure the gap using a Growth–Development Divergence Index.
 - Identify states that outperform or underperform relative to their economic size.
-- Demonstrate that economic growth and human development are related but not identical.
+- Develop an interactive dashboard for policy-level insights.
 
 ---
 
 # 📂 Data Collection
 
-Unlike conventional projects using a single dataset, this research required building a unified database by collecting data from multiple official government publications.
-
-The integrated dataset was created by combining information on:
+The dataset was manually compiled by integrating multiple official government datasets including:
 
 - 📈 Gross State Domestic Product (GSDP)
 - 💰 Per Capita Income
@@ -49,230 +45,214 @@ The integrated dataset was created by combining information on:
 - ❤️ Human Development Index (HDI)
 - 📚 Literacy Rate
 - 📉 Multidimensional Poverty Index (MPI)
+- 📊 Rural & Urban Poverty
+- 💼 Unemployment Rate
 
-The collected data was manually cleaned, validated, standardized, and merged into a relational database before analysis.
+Every dataset was cleaned, standardized and merged into one master dataset before analysis.
 
 ---
 
 # 🛠 Methodology
 
-The project involved several stages:
+### Data Engineering
 
-- Collecting data from multiple official sources.
-- Cleaning inconsistent records.
-- Standardizing state names across datasets.
-- Handling missing values.
-- Designing relational database tables.
-- Joining multiple datasets using SQL.
-- Applying Window Functions for ranking.
-- Creating weighted scoring models.
-- Performing comparative analysis.
+- Data Collection
+- Data Cleaning
+- Standardization
+- Missing Value Handling
+- Data Integration
+
+### SQL Analysis
+
+- Window Functions
+- Ranking
+- Aggregate Analysis
+- Comparative Analysis
+- Score Calculation
+
+### Dashboard Development
+
+- KPI Design
+- Interactive Filters
+- Charts
+- Maps
+- Data Storytelling
 
 ---
 
 # 💻 SQL Concepts Used
 
-- Common Table Expressions (CTEs)
+- CTEs
 - Window Functions
 - DENSE_RANK()
+- CASE Statements
 - Aggregate Functions
 - INNER JOIN
+- Subqueries
 - Ranking Algorithms
 - Weighted Score Calculation
 - Multi-table Analysis
-- Data Cleaning
-- Comparative Analytics
 
 ---
 
-# 📊 Analytical Models
+# 📊 Dashboard Features
 
-## 🚀 Overall Growth Score
+### 📌 Dashboard 1 — India Development Overview
 
-A weighted index designed to measure the overall economic strength of each state using:
-
-- Population
-- GSDP
-- Per Capita Income
-- HDI
-- Literacy
-- Poverty
+- Total Population
+- Average HDI
+- Average Literacy
+- Average Poverty
+- Average GSDP
+- Interactive State Filter
+- Population Distribution
+- GDP Ranking
+- HDI Comparison
+- Literacy Analysis
+- Poverty Analysis
+- India Population Map
 
 ---
 
-## 🌱 Overall Development Score
+### 📌 Dashboard 2 — Growth vs Development Analysis
 
-A human development-focused index that gives greater importance to:
+- Growth Rate Analysis
+- Per Capita Income Comparison
+- GDP vs HDI Scatter Analysis
+- Growth–Development Divergence
+- State Development Insights
+- Interactive KPI Cards
+- Analytical Storytelling
 
-- HDI
-- Literacy
-- Poverty
+---
 
-while also considering economic indicators to provide a balanced measure of development.
+# 📈 Analytical Models
+
+## 🚀 Growth Score
+
+Measures the overall economic strength of each state using weighted indicators.
+
+---
+
+## 🌱 Development Score
+
+Measures overall human development using HDI, Literacy and Poverty along with supporting economic indicators.
 
 ---
 
 ## ⚖️ Growth–Development Divergence Index
 
-The central contribution of this project.
+Measures the gap between economic growth and human development.
 
-This index measures the gap between economic growth and human development.
-
-Higher values indicate that a state's economic performance and social development are moving in different directions.
-
-Lower values indicate balanced and inclusive development.
+States with higher divergence indicate economic growth that is not fully reflected in human development.
 
 ---
 
-# 🔍 Major Findings
+# 🔍 Key Findings
 
-The analysis revealed several important insights:
-
-- Large economies are not always the most developed.
-- Smaller states such as Kerala and Goa consistently outperform many larger economies in human development.
-- States like Maharashtra and Gujarat generate substantial economic output but still have room to improve social outcomes.
-- Some North-Eastern states achieve excellent development despite relatively small economies.
-- Economic growth alone cannot explain regional development differences.
-
-These findings strongly support the **Growth vs Development** hypothesis.
+- High GDP does not always correspond to high HDI.
+- Smaller states like Goa and Sikkim outperform several larger economies in per capita income and development.
+- States with strong economic output still experience development challenges.
+- Significant disparities exist between rural and urban poverty.
+- Development requires investment in human capital alongside economic growth.
 
 ---
 
-# ⚠ Challenges Faced
+# 📷 Dashboard Preview
 
-This project involved several real-world analytical challenges.
+## Dashboard 1
 
-Unlike ready-made datasets, every variable had to be collected separately and carefully integrated.
-
-Major challenges included:
-
-- Data scattered across multiple government reports.
-- Different reporting years.
-- Inconsistent naming conventions.
-- Missing observations.
-- Standardizing datasets before merging.
-- Designing unbiased weighted scoring models.
-- Balancing economic and social indicators fairly.
-
-These challenges made data preparation one of the most time-consuming phases of the project.
+*(Insert Screenshot Here)*
 
 ---
 
-# 📁 Repository Structure
+## Dashboard 2
+
+*(Insert Screenshot Here)*
+
+---
+
+# 📂 Repository Structure
 
 ```text
 Growth-vs-Development-Analysis
 
 │── README.md
 │
+├── Dashboard
+│     ├── Indian_States_Development_Dashboard.xlsx
+│     ├── Dashboard.pdf
+│
 ├── SQL
-│     ├── Growth Score.sql
-│     ├── Development Score.sql
-│     └── Growth Development Divergence.sql
+│     ├── 01_Data_Exploration.sql
+│     ├── 02_State_Ranking_Analysis.sql
+│     ├── 03_Development_Score_Calculation.sql
+│     └── 04_Growth_Divergence_Index.sql
 │
 ├── Presentation
-│     └── Growth_vs_Development_Analysis.pptx
+│     └── Indian_States_Development_Analysis_Presentation.pptx
+│
+├── Data
+│     └── Indian_Development_Dataset.xlsx
 │
 └── Images
-      ├── Growth Score.png
-      ├── Development Score.png
-      └── Divergence Analysis.png
+      ├── Dashboard_Page_1.png
+      └── Dashboard_Page_2.png
 ```
 
 ---
 
-# 🔒 Dataset Availability
-
-The final integrated dataset has **not been included** in this repository.
-
-The dataset was manually compiled by combining multiple official government datasets, followed by extensive cleaning, validation, and standardization.
-
-This repository focuses on demonstrating the analytical methodology, SQL implementation, and research findings rather than redistributing the compiled dataset.
-
----
-
-# 🚀 Future Scope
-
-This SQL project represents the first phase of a larger analytics pipeline.
-
-The same dataset will be used for advanced analysis using Python and Business Intelligence tools.
-
-### Python
-
-- Exploratory Data Analysis (EDA)
-- Statistical Analysis
-- Correlation Analysis
-- Regression Models
-- Time Series Analysis
-- Machine Learning
-
-### Excel / Power BI
-
-Interactive dashboards will be developed featuring:
-
-- Growth Score Rankings
-- Development Score Rankings
-- Divergence Analysis
-- GDP vs HDI
-- Literacy vs Poverty
-- Per Capita Income Analysis
-- Dynamic State Comparison
-- Interactive KPI Cards
-
----
-
-# 🛠 Technologies Used
+# 🛠 Tools & Technologies
 
 - MySQL
 - SQL
-- Microsoft PowerPoint
-
-**Upcoming**
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Power BI
 - Microsoft Excel
+- Pivot Tables
+- Pivot Charts
+- VBA
+- Power Query
+- Microsoft PowerPoint
+- Canva
 
 ---
 
 # 🎓 Skills Demonstrated
 
-- Data Collection
+- SQL
 - Data Cleaning
 - Database Design
-- SQL Querying
-- Window Functions
-- Comparative Analysis
-- Ranking Algorithms
-- Economic Analysis
+- Dashboard Design
+- KPI Development
+- Data Visualization
 - Research Methodology
+- Economic Analysis
+- Comparative Analytics
 - Data Storytelling
+
+---
+
+# ⚠️ Presentation Note
+
+GitHub cannot preview Canva-created PowerPoint presentations correctly.
+
+📥 **Please download the raw `.pptx` file and open it using Microsoft PowerPoint for the best viewing experience.**
 
 ---
 
 # 📌 Conclusion
 
-This project demonstrates that **economic growth and human development should not be treated as synonymous concepts.**
+This project demonstrates that **economic growth and human development are complementary but distinct dimensions of progress.**
 
-While some states successfully convert economic resources into better living standards, others continue to experience significant social challenges despite strong economic performance.
-
-The findings emphasize that sustainable development depends not only on increasing economic output but also on effective investment in education, healthcare, poverty reduction, and human capital.
+By integrating SQL-based analysis with an interactive Excel dashboard, the project provides a comprehensive framework for evaluating regional disparities across Indian States and Union Territories.
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
-**Aayush Patil**
+## **Aayush Patil**
 
-## ⭐ If you found this project useful, consider giving it a Star!
-
+⭐ If you found this project useful, consider giving it a **Star**!
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Aayush%20Patil-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/aayush-patil-56857836b/)
 
 [![GitHub](https://img.shields.io/badge/GitHub-aayushpatil834--hash-black?style=for-the-badge&logo=github)](https://github.com/aayushpatil834-hash)
-
-</div>
-
